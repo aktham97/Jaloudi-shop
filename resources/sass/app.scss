@@ -1,0 +1,41 @@
+.modal-backdrop
+{
+    background-color: rgba(0,0,0,0.5) !important;
+}
+.w-150px
+{
+    width: 150px;
+}
+.invalid-feedback
+{
+    display: inline-block !important;
+}
+.fixed-button
+{
+    position: fixed !important;
+}
+.button-arrow-down
+{
+    margin-bottom: 10px;
+}
+
+.footer
+{
+    #footer {
+        position: absolute !important;
+        bottom: 0 !important;
+        width: 100% !important;
+        height: 2.5rem !important;            /* Footer height */
+    }
+}
+.register-errors
+{
+    text-align: center !important;
+}
+.category
+{
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none !important;
+}
