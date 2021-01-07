@@ -42,7 +42,6 @@
                                     <h4 class="card-title">
                                         Men´s clothing
                                     </h4>
-                                    <p class="card-text">jjjjjj</p>
                                 </div>
                             </div>
                         </div>
@@ -56,7 +55,6 @@
                                     <h4 class="card-title">
                                         Women´s clothing
                                     </h4>
-                                    <p class="card-text">jjjjjj</p>
                                 </div>
                             </div>
                         </div>
@@ -68,7 +66,6 @@
                                      src="../../../public/images/106032900-1563825608021rockets.jpg" alt="">
                                 <div class="card-body category" >
                                     <h4 class="card-title">Children's clothing</h4>
-                                    <p class="card-text">jjjjjj</p>
                                 </div>
                             </div>
                         </div>
