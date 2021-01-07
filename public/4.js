@@ -180,7 +180,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -528,13 +527,7 @@ var render = function() {
       _c(
         "div",
         { staticClass: "col-lg-3" },
-        [
-          _c("br"),
-          _vm._v(" "),
-          _c("mens_clothing"),
-          _vm._v(" "),
-          _c("Women_clothing")
-        ],
+        [_c("br"), _vm._v(" "), _c("Women_clothing")],
         1
       ),
       _vm._v(" "),

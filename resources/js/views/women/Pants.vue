@@ -5,7 +5,6 @@
 
             <div class="col-lg-3">
                 <br>
-                <mens_clothing></mens_clothing>
                 <Women_clothing></Women_clothing>
 
             </div>

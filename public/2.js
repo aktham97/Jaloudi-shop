@@ -337,14 +337,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                console.log(this.shirtData.rating, this.shirtData.id);
                 formData = new FormData();
                 formData.append('rating', this.shirtData.rating);
-                _context3.prev = 3;
-                _context3.next = 6;
+                _context3.prev = 2;
+                _context3.next = 5;
                 return _services_men_shirt_service__WEBPACK_IMPORTED_MODULE_1__["editRating"](this.shirtData.id, formData);
 
-              case 6:
+              case 5:
                 response = _context3.sent;
                 this.hideNewRating();
                 this.flashMessage.success({
@@ -355,34 +354,34 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   id: '',
                   rating: ''
                 };
-                _context3.next = 22;
+                _context3.next = 21;
                 break;
 
-              case 12:
-                _context3.prev = 12;
-                _context3.t0 = _context3["catch"](3);
+              case 11:
+                _context3.prev = 11;
+                _context3.t0 = _context3["catch"](2);
                 console.log(_context3.t0);
                 _context3.t1 = _context3.t0.response.status;
-                _context3.next = _context3.t1 === 422 ? 18 : 20;
+                _context3.next = _context3.t1 === 422 ? 17 : 19;
                 break;
 
-              case 18:
+              case 17:
                 this.errors = _context3.t0.response.data.errors;
-                return _context3.abrupt("break", 22);
+                return _context3.abrupt("break", 21);
 
-              case 20:
+              case 19:
                 this.flashMessage.error({
                   message: 'Some error occurred , Please try again!',
                   time: 5000
                 });
-                return _context3.abrupt("break", 22);
+                return _context3.abrupt("break", 21);
 
-              case 22:
+              case 21:
               case "end":
                 return _context3.stop();
             }
           }
-        }, _callee3, this, [[3, 12]]);
+        }, _callee3, this, [[2, 11]]);
       }));
 
       function addNewRating() {

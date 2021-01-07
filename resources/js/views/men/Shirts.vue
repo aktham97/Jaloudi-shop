@@ -235,7 +235,6 @@
 
             },
             addNewRating: async function(){
-                console.log(this.shirtData.rating,this.shirtData.id);
                 let formData = new FormData();
                 formData.append('rating', this.shirtData.rating);
                 try {

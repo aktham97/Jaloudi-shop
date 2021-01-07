@@ -82,7 +82,7 @@ const routes = [
     },
     {
         path: '',
-        name:'login',
+        name:'startPage',
         component: () => import('./views/StartPage.vue'),
         // beforeEnter(to,from,next)
         // {
