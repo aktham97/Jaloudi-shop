@@ -26,10 +26,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/men/Shirts.vue?vue&type=script&lang=js&":
-/*!****************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/men/Shirts.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/men/Pants.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/men/Pants.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -37,7 +37,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _services_men_shirt_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/men/shirt_service */ "./resources/js/services/men/shirt_service.js");
+/* harmony import */ var _services_men_pant_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/men/pant_service */ "./resources/js/services/men/pant_service.js");
 /* harmony import */ var _components_Men_clothing__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Men_clothing */ "./resources/js/components/Men_clothing.vue");
 
 
@@ -179,21 +179,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'shirts',
+  name: 'pants',
   components: {
     Men_clothing: _components_Men_clothing__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   data: function data() {
     return {
-      shirts: {},
-      shirtData: {
+      pants: {},
+      pantData: {
         name: '',
         price: '',
         description: '',
@@ -201,17 +197,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         image: '',
         id: ''
       },
-      moreShirts: false,
+      morePants: false,
       nextPage: 0,
       errors: {}
     };
   },
   mounted: function mounted() {
-    this.loadShirts();
+    this.loadPantts();
   },
   methods: {
-    loadShirts: function () {
-      var _loadShirts = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+    loadPantts: function () {
+      var _loadPantts = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
         var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
@@ -219,47 +215,46 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context.prev = 0;
                 _context.next = 3;
-                return _services_men_shirt_service__WEBPACK_IMPORTED_MODULE_1__["loadShirts"]();
+                return _services_men_pant_service__WEBPACK_IMPORTED_MODULE_1__["loadPants"]();
 
               case 3:
                 response = _context.sent;
-                console.log(response);
-                this.shirts = response.data.data;
+                this.pants = response.data.data;
 
                 if (response.data.current_page < response.data.last_page) {
-                  this.moreShirts = true;
+                  this.morePants = true;
                   this.nextPage = response.data.current_page + 1;
                 } else {
-                  this.moreShirts = false;
+                  this.morePants = false;
                 }
 
-                _context.next = 12;
+                _context.next = 11;
                 break;
 
-              case 9:
-                _context.prev = 9;
+              case 8:
+                _context.prev = 8;
                 _context.t0 = _context["catch"](0);
                 this.flashMessage.error({
                   message: 'Some error occurred , Please refresh!',
                   time: 5000
                 });
 
-              case 12:
+              case 11:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[0, 9]]);
+        }, _callee, this, [[0, 8]]);
       }));
 
-      function loadShirts() {
-        return _loadShirts.apply(this, arguments);
+      function loadPantts() {
+        return _loadPantts.apply(this, arguments);
       }
 
-      return loadShirts;
+      return loadPantts;
     }(),
-    loadMoreShirts: function () {
-      var _loadMoreShirts = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+    loadMorePants: function () {
+      var _loadMorePants = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
         var _this = this;
 
         var response;
@@ -269,20 +264,20 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context2.prev = 0;
                 _context2.next = 3;
-                return _services_men_shirt_service__WEBPACK_IMPORTED_MODULE_1__["loadMoreShirts"](this.nextPage);
+                return _services_men_pant_service__WEBPACK_IMPORTED_MODULE_1__["loadMorePants"](this.nextPage);
 
               case 3:
                 response = _context2.sent;
 
                 if (response.data.current_page < response.data.last_page) {
-                  this.moreShirts = true;
+                  this.morePants = true;
                   this.nextPage = response.data.current_page + 1;
                 } else {
-                  this.moreShirts = false;
+                  this.morePants = false;
                 }
 
                 response.data.data.forEach(function (data) {
-                  _this.shirts.push(data);
+                  _this.pants.push(data);
                 });
                 _context2.next = 11;
                 break;
@@ -291,7 +286,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _context2.prev = 8;
                 _context2.t0 = _context2["catch"](0);
                 this.flashMessage.error({
-                  message: 'Some error occurred during load more shirts , Please refresh!',
+                  message: 'Some error occurred during load more pants , Please refresh!',
                   time: 5000
                 });
 
@@ -303,31 +298,31 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee2, this, [[0, 8]]);
       }));
 
-      function loadMoreShirts() {
-        return _loadMoreShirts.apply(this, arguments);
+      function loadMorePants() {
+        return _loadMorePants.apply(this, arguments);
       }
 
-      return loadMoreShirts;
+      return loadMorePants;
     }(),
     attachImage: function attachImage() {
-      this.shirtData.image = this.$refs.newShirtImage.files[0];
+      this.pantData.image = this.$refs.newPantImage.files[0];
       var reader = new FileReader();
       reader.addEventListener('load', function () {
-        this.$refs.newShirtImageDisplay.src = reader.result;
+        this.$refs.newPantImageDisplay.src = reader.result;
       }.bind(this), false);
-      reader.readAsDataURL(this.shirtData.image);
+      reader.readAsDataURL(this.pantData.image);
     },
-    hideNewShirt: function hideNewShirt() {
-      this.$refs.newShirtModal.hide();
+    hideNewPant: function hideNewPant() {
+      this.$refs.newPantModal.hide();
     },
-    showNewShirt: function showNewShirt() {
-      this.$refs.newShirtModal.show();
+    showNewPant: function showNewPant() {
+      this.$refs.newPantModal.show();
     },
     hideNewRating: function hideNewRating() {
       this.$refs.newRatingModal.hide();
     },
     showNewRating: function showNewRating(id) {
-      this.shirtData.id = id;
+      this.pantData.id = id;
       this.$refs.newRatingModal.show();
     },
     addNewRating: function () {
@@ -338,10 +333,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context3.prev = _context3.next) {
               case 0:
                 formData = new FormData();
-                formData.append('rating', this.shirtData.rating);
+                formData.append('rating', this.pantData.rating);
                 _context3.prev = 2;
                 _context3.next = 5;
-                return _services_men_shirt_service__WEBPACK_IMPORTED_MODULE_1__["editRating"](this.shirtData.id, formData);
+                return _services_men_pant_service__WEBPACK_IMPORTED_MODULE_1__["editRating"](this.pantData.id, formData);
 
               case 5:
                 response = _context3.sent;
@@ -350,33 +345,32 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   message: 'Rating added successfully!',
                   time: 5000
                 });
-                this.shirtData = {
+                this.pantData = {
                   id: '',
                   rating: ''
                 };
-                _context3.next = 21;
+                _context3.next = 20;
                 break;
 
               case 11:
                 _context3.prev = 11;
                 _context3.t0 = _context3["catch"](2);
-                console.log(_context3.t0);
                 _context3.t1 = _context3.t0.response.status;
-                _context3.next = _context3.t1 === 422 ? 17 : 19;
+                _context3.next = _context3.t1 === 422 ? 16 : 18;
                 break;
 
-              case 17:
+              case 16:
                 this.errors = _context3.t0.response.data.errors;
-                return _context3.abrupt("break", 21);
+                return _context3.abrupt("break", 20);
 
-              case 19:
+              case 18:
                 this.flashMessage.error({
                   message: 'Some error occurred , Please try again!',
                   time: 5000
                 });
-                return _context3.abrupt("break", 21);
+                return _context3.abrupt("break", 20);
 
-              case 21:
+              case 20:
               case "end":
                 return _context3.stop();
             }
@@ -390,31 +384,31 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
       return addNewRating;
     }(),
-    createShirt: function () {
-      var _createShirt = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
+    createPant: function () {
+      var _createPant = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
         var formData, response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
           while (1) {
             switch (_context4.prev = _context4.next) {
               case 0:
                 formData = new FormData();
-                formData.append('name', this.shirtData.name);
-                formData.append('price', this.shirtData.price);
-                formData.append('description', this.shirtData.description);
-                formData.append('image', this.shirtData.image);
+                formData.append('name', this.pantData.name);
+                formData.append('price', this.pantData.price);
+                formData.append('description', this.pantData.description);
+                formData.append('image', this.pantData.image);
                 _context4.prev = 5;
                 _context4.next = 8;
-                return _services_men_shirt_service__WEBPACK_IMPORTED_MODULE_1__["createShirt"](formData);
+                return _services_men_pant_service__WEBPACK_IMPORTED_MODULE_1__["createPant"](formData);
 
               case 8:
                 response = _context4.sent;
-                this.shirts.unshift(response.data);
-                this.hideNewShirt();
+                this.pants.unshift(response.data);
+                this.hideNewPant();
                 this.flashMessage.success({
-                  message: 'Shirt Stored successfully!',
+                  message: 'Pant Stored successfully!',
                   time: 5000
                 });
-                this.shirtData = {
+                this.pantData = {
                   name: '',
                   price: '',
                   description: '',
@@ -449,11 +443,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee4, this, [[5, 15]]);
       }));
 
-      function createShirt() {
-        return _createShirt.apply(this, arguments);
+      function createPant() {
+        return _createPant.apply(this, arguments);
       }
 
-      return createShirt;
+      return createPant;
     }()
   }
 });
@@ -511,10 +505,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/men/Shirts.vue?vue&type=template&id=9dbafa16&":
-/*!********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/men/Shirts.vue?vue&type=template&id=9dbafa16& ***!
-  \********************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/men/Pants.vue?vue&type=template&id=e3fc5258&":
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/men/Pants.vue?vue&type=template&id=e3fc5258& ***!
+  \*******************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -543,7 +537,7 @@ var render = function() {
         _c(
           "div",
           { staticClass: "row" },
-          _vm._l(_vm.shirts, function(shirt, index) {
+          _vm._l(_vm.pants, function(pant, index) {
             return _c(
               "div",
               { key: index, staticClass: "col-lg-4 col-md-6 mb-4" },
@@ -556,12 +550,12 @@ var render = function() {
                         src:
                           _vm.$store.state.servicePath +
                           "/storage/" +
-                          shirt.image,
+                          pant.image,
                         alt: ""
                       },
                       on: {
                         click: function($event) {
-                          return _vm.showNewRating(shirt.id)
+                          return _vm.showNewRating(pant.id)
                         }
                       }
                     })
@@ -570,21 +564,21 @@ var render = function() {
                   _c("div", { staticClass: "card-body" }, [
                     _c("h4", { staticClass: "card-title" }, [
                       _c("a", { attrs: { href: "#" } }, [
-                        _vm._v(_vm._s(shirt.name))
+                        _vm._v(_vm._s(pant.name))
                       ])
                     ]),
                     _vm._v(" "),
                     _c("h5", { staticStyle: { color: "red" } }, [
-                      _vm._v("$" + _vm._s(shirt.price))
+                      _vm._v("$" + _vm._s(pant.price))
                     ]),
                     _vm._v(" "),
                     _c("p", { staticClass: "card-text" }, [
-                      _vm._v(_vm._s(shirt.description))
+                      _vm._v(_vm._s(pant.description))
                     ])
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "card-footer" }, [
-                    shirt.rating >= 4.5
+                    pant.rating >= 4.5
                       ? _c("small", { staticClass: "text-muted" }, [
                           _vm._v(
                             "★ ★ ★ ★\n                                ★\n                            "
@@ -592,7 +586,7 @@ var render = function() {
                         ])
                       : _vm._e(),
                     _vm._v(" "),
-                    shirt.rating >= 3.5 && shirt.rating < 4.5
+                    pant.rating >= 3.5 && pant.rating <= 4.5
                       ? _c("small", { staticClass: "text-muted" }, [
                           _vm._v(
                             "★\n                                ★ ★ ★ ☆\n                            "
@@ -600,7 +594,7 @@ var render = function() {
                         ])
                       : _vm._e(),
                     _vm._v(" "),
-                    shirt.rating >= 2.5 && shirt.rating < 3.5
+                    pant.rating >= 2.5 && pant.rating <= 3.5
                       ? _c("small", { staticClass: "text-muted" }, [
                           _vm._v(
                             "★\n                                ★ ★ ☆ ☆\n                            "
@@ -608,7 +602,7 @@ var render = function() {
                         ])
                       : _vm._e(),
                     _vm._v(" "),
-                    shirt.rating >= 1.5 && shirt.rating < 2.5
+                    pant.rating >= 1.5 && pant.rating <= 2.5
                       ? _c("small", { staticClass: "text-muted" }, [
                           _vm._v(
                             "★\n                                ★ ☆ ☆ ☆\n                            "
@@ -616,7 +610,7 @@ var render = function() {
                         ])
                       : _vm._e(),
                     _vm._v(" "),
-                    shirt.rating >= 0.5 && shirt.rating < 1.5
+                    pant.rating >= 0.5 && pant.rating <= 1.5
                       ? _c("small", { staticClass: "text-muted" }, [
                           _vm._v(
                             "★\n                                ☆ ☆ ☆ ☆\n                            "
@@ -624,7 +618,7 @@ var render = function() {
                         ])
                       : _vm._e(),
                     _vm._v(" "),
-                    shirt.rating < 0.5
+                    pant.rating < 0.5
                       ? _c("small", { staticClass: "text-muted" }, [
                           _vm._v(
                             "☆ ☆ ☆ ☆\n                                ☆\n                            "
@@ -650,30 +644,24 @@ var render = function() {
           {
             staticClass: "btn btn-primary fixed-button",
             attrs: { type: "button" },
-            on: { click: _vm.showNewShirt }
+            on: { click: _vm.showNewPant }
           },
           [
             _c("span", { staticClass: "fa fa-plus" }),
-            _vm._v(" Add New shirt\n            ")
+            _vm._v(" Add New pant\n            ")
           ]
-        ),
-        _vm._v(" "),
-        _c("br"),
-        _vm._v(" "),
-        _c("br"),
-        _vm._v(" "),
-        _c("br")
+        )
       ])
     ]),
     _vm._v(" "),
-    _vm.moreShirts
+    _vm.morePants
       ? _c("div", { staticClass: "text-center" }, [
           _c(
             "button",
             {
               staticClass: "btn btn-primary btn-sm button-arrow-down",
               attrs: { type: "button" },
-              on: { click: _vm.loadMoreShirts }
+              on: { click: _vm.loadMorePants }
             },
             [
               _c("span", { staticClass: "fa fa-arrow-down" }),
@@ -689,8 +677,8 @@ var render = function() {
         _c(
           "b-modal",
           {
-            ref: "newShirtModal",
-            attrs: { "hide-footer": "", title: "Add New Shirt" }
+            ref: "newPantModal",
+            attrs: { "hide-footer": "", title: "Add New pant" }
           },
           [
             _c("div", { staticClass: "d-blockr" }, [
@@ -700,7 +688,7 @@ var render = function() {
                   on: {
                     submit: function($event) {
                       $event.preventDefault()
-                      return _vm.createShirt($event)
+                      return _vm.createPant($event)
                     }
                   }
                 },
@@ -713,8 +701,8 @@ var render = function() {
                         {
                           name: "model",
                           rawName: "v-model",
-                          value: _vm.shirtData.name,
-                          expression: "shirtData.name"
+                          value: _vm.pantData.name,
+                          expression: "pantData.name"
                         }
                       ],
                       staticClass: "form-control",
@@ -723,13 +711,13 @@ var render = function() {
                         id: "name",
                         placeholder: "Enter name"
                       },
-                      domProps: { value: _vm.shirtData.name },
+                      domProps: { value: _vm.pantData.name },
                       on: {
                         input: function($event) {
                           if ($event.target.composing) {
                             return
                           }
-                          _vm.$set(_vm.shirtData, "name", $event.target.value)
+                          _vm.$set(_vm.pantData, "name", $event.target.value)
                         }
                       }
                     }),
@@ -749,8 +737,8 @@ var render = function() {
                         {
                           name: "model",
                           rawName: "v-model",
-                          value: _vm.shirtData.price,
-                          expression: "shirtData.price"
+                          value: _vm.pantData.price,
+                          expression: "pantData.price"
                         }
                       ],
                       staticClass: "form-control",
@@ -760,13 +748,13 @@ var render = function() {
                         id: "price",
                         placeholder: "price"
                       },
-                      domProps: { value: _vm.shirtData.price },
+                      domProps: { value: _vm.pantData.price },
                       on: {
                         input: function($event) {
                           if ($event.target.composing) {
                             return
                           }
-                          _vm.$set(_vm.shirtData, "price", $event.target.value)
+                          _vm.$set(_vm.pantData, "price", $event.target.value)
                         }
                       }
                     }),
@@ -790,19 +778,19 @@ var render = function() {
                         {
                           name: "model",
                           rawName: "v-model",
-                          value: _vm.shirtData.description,
-                          expression: "shirtData.description"
+                          value: _vm.pantData.description,
+                          expression: "pantData.description"
                         }
                       ],
                       attrs: { rows: "4", cols: "50", id: "description" },
-                      domProps: { value: _vm.shirtData.description },
+                      domProps: { value: _vm.pantData.description },
                       on: {
                         input: function($event) {
                           if ($event.target.composing) {
                             return
                           }
                           _vm.$set(
-                            _vm.shirtData,
+                            _vm.pantData,
                             "description",
                             $event.target.value
                           )
@@ -820,10 +808,10 @@ var render = function() {
                   _c("div", { staticClass: "form-check" }, [
                     _c("label", { attrs: { for: "image" } }, [_vm._v("Image")]),
                     _vm._v(" "),
-                    _vm.shirtData.image.name
+                    _vm.pantData.image.name
                       ? _c("div", [
                           _c("img", {
-                            ref: "newShirtImageDisplay",
+                            ref: "newPantImageDisplay",
                             staticClass: "w-150px",
                             attrs: { src: "" }
                           })
@@ -831,7 +819,7 @@ var render = function() {
                       : _vm._e(),
                     _vm._v(" "),
                     _c("input", {
-                      ref: "newShirtImage",
+                      ref: "newPantImage",
                       staticClass: "form-control",
                       attrs: { type: "file", id: "image" },
                       on: { change: _vm.attachImage }
@@ -852,7 +840,7 @@ var render = function() {
                       {
                         staticClass: "btn btn-default",
                         attrs: { type: "button" },
-                        on: { click: _vm.hideNewShirt }
+                        on: { click: _vm.hideNewPant }
                       },
                       [_vm._v("Cancel")]
                     ),
@@ -906,8 +894,8 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.shirtData.rating,
-                            expression: "shirtData.rating"
+                            value: _vm.pantData.rating,
+                            expression: "pantData.rating"
                           }
                         ],
                         staticClass: "form-control",
@@ -923,7 +911,7 @@ var render = function() {
                                 return val
                               })
                             _vm.$set(
-                              _vm.shirtData,
+                              _vm.pantData,
                               "rating",
                               $event.target.multiple
                                 ? $$selectedVal
@@ -1077,55 +1065,55 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/services/men/shirt_service.js":
-/*!****************************************************!*\
-  !*** ./resources/js/services/men/shirt_service.js ***!
-  \****************************************************/
-/*! exports provided: createShirt, loadShirts, deleteShirt, editShirt, loadMoreShirts, editRating */
+/***/ "./resources/js/services/men/pant_service.js":
+/*!***************************************************!*\
+  !*** ./resources/js/services/men/pant_service.js ***!
+  \***************************************************/
+/*! exports provided: createPant, loadPants, deletePant, editPant, loadMorePants, editRating */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createShirt", function() { return createShirt; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadShirts", function() { return loadShirts; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteShirt", function() { return deleteShirt; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editShirt", function() { return editShirt; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadMoreShirts", function() { return loadMoreShirts; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createPant", function() { return createPant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadPants", function() { return loadPants; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deletePant", function() { return deletePant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editPant", function() { return editPant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadMorePants", function() { return loadMorePants; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editRating", function() { return editRating; });
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../http_service */ "./resources/js/services/http_service.js");
 
-function createShirt(data) {
-  return Object(_http_service__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post('/Men/shirts', data);
+function createPant(data) {
+  return Object(_http_service__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post('/Men/pants', data);
 }
-function loadShirts() {
-  return Object(_http_service__WEBPACK_IMPORTED_MODULE_0__["http"])().get('/Men/shirts');
+function loadPants() {
+  return Object(_http_service__WEBPACK_IMPORTED_MODULE_0__["http"])().get('/Men/pants');
 }
-function deleteShirt(id) {
-  return Object(_http_service__WEBPACK_IMPORTED_MODULE_0__["http"])()["delete"]("/Men/shirts/".concat(id));
+function deletePant(id) {
+  return Object(_http_service__WEBPACK_IMPORTED_MODULE_0__["http"])()["delete"]("/Men/pants/".concat(id));
 }
-function editShirt(id, data) {
-  return Object(_http_service__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post("/Men/shirts/".concat(id), data);
+function editPant(id, data) {
+  return Object(_http_service__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post("/Men/pants/".concat(id), data);
 }
-function loadMoreShirts(nextPage) {
-  return Object(_http_service__WEBPACK_IMPORTED_MODULE_0__["http"])().get("/Men/shirts?page=".concat(nextPage));
+function loadMorePants(nextPage) {
+  return Object(_http_service__WEBPACK_IMPORTED_MODULE_0__["http"])().get("/Men/pants?page=".concat(nextPage));
 }
 function editRating(id, data) {
-  return Object(_http_service__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post("/Men/shirts/rating/".concat(id), data);
+  return Object(_http_service__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post("/Men/pants/rating/".concat(id), data);
 }
 
 /***/ }),
 
-/***/ "./resources/js/views/men/Shirts.vue":
-/*!*******************************************!*\
-  !*** ./resources/js/views/men/Shirts.vue ***!
-  \*******************************************/
+/***/ "./resources/js/views/men/Pants.vue":
+/*!******************************************!*\
+  !*** ./resources/js/views/men/Pants.vue ***!
+  \******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Shirts_vue_vue_type_template_id_9dbafa16___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Shirts.vue?vue&type=template&id=9dbafa16& */ "./resources/js/views/men/Shirts.vue?vue&type=template&id=9dbafa16&");
-/* harmony import */ var _Shirts_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Shirts.vue?vue&type=script&lang=js& */ "./resources/js/views/men/Shirts.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Pants_vue_vue_type_template_id_e3fc5258___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Pants.vue?vue&type=template&id=e3fc5258& */ "./resources/js/views/men/Pants.vue?vue&type=template&id=e3fc5258&");
+/* harmony import */ var _Pants_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Pants.vue?vue&type=script&lang=js& */ "./resources/js/views/men/Pants.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -1135,9 +1123,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Shirts_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Shirts_vue_vue_type_template_id_9dbafa16___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Shirts_vue_vue_type_template_id_9dbafa16___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Pants_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Pants_vue_vue_type_template_id_e3fc5258___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Pants_vue_vue_type_template_id_e3fc5258___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -1147,38 +1135,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/views/men/Shirts.vue"
+component.options.__file = "resources/js/views/men/Pants.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/views/men/Shirts.vue?vue&type=script&lang=js&":
-/*!********************************************************************!*\
-  !*** ./resources/js/views/men/Shirts.vue?vue&type=script&lang=js& ***!
-  \********************************************************************/
+/***/ "./resources/js/views/men/Pants.vue?vue&type=script&lang=js&":
+/*!*******************************************************************!*\
+  !*** ./resources/js/views/men/Pants.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Shirts_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Shirts.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/men/Shirts.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Shirts_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pants_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Pants.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/men/Pants.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pants_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/views/men/Shirts.vue?vue&type=template&id=9dbafa16&":
-/*!**************************************************************************!*\
-  !*** ./resources/js/views/men/Shirts.vue?vue&type=template&id=9dbafa16& ***!
-  \**************************************************************************/
+/***/ "./resources/js/views/men/Pants.vue?vue&type=template&id=e3fc5258&":
+/*!*************************************************************************!*\
+  !*** ./resources/js/views/men/Pants.vue?vue&type=template&id=e3fc5258& ***!
+  \*************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Shirts_vue_vue_type_template_id_9dbafa16___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Shirts.vue?vue&type=template&id=9dbafa16& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/men/Shirts.vue?vue&type=template&id=9dbafa16&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Shirts_vue_vue_type_template_id_9dbafa16___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Pants_vue_vue_type_template_id_e3fc5258___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Pants.vue?vue&type=template&id=e3fc5258& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/men/Pants.vue?vue&type=template&id=e3fc5258&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Pants_vue_vue_type_template_id_e3fc5258___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Shirts_vue_vue_type_template_id_9dbafa16___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Pants_vue_vue_type_template_id_e3fc5258___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

@@ -94,6 +94,21 @@ const routes = [
         //         next('/home');
         //     }
         // }
+    },
+    {
+        path: '/test',
+        name:'test',
+        component: () => import('./views/test.vue'),
+        // beforeEnter(to,from,next)
+        // {
+        //     if(!auth.isLoggedIN())
+        //     {
+        //         next();
+        //     }else
+        //     {
+        //         next('/home');
+        //     }
+        // }
     }
 ];
 

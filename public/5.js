@@ -26,10 +26,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/women/Pants.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/women/Pants.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/women/Jackets.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/women/Jackets.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -37,7 +37,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _services_women_pant_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/women/pant_service */ "./resources/js/services/women/pant_service.js");
+/* harmony import */ var _services_women_jacket_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/women/jacket_service */ "./resources/js/services/women/jacket_service.js");
 /* harmony import */ var _components_Women_clothing__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Women_clothing */ "./resources/js/components/Women_clothing.vue");
 
 
@@ -179,17 +179,18 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'pants',
+  name: 'jackets',
   components: {
     Women_clothing: _components_Women_clothing__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   data: function data() {
     return {
-      pants: {},
-      pantData: {
+      jackets: {},
+      jacketData: {
         name: '',
         price: '',
         description: '',
@@ -197,17 +198,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         image: '',
         id: ''
       },
-      morePants: false,
+      moreJackets: false,
       nextPage: 0,
       errors: {}
     };
   },
   mounted: function mounted() {
-    this.loadPantts();
+    this.loadJackets();
   },
   methods: {
-    loadPantts: function () {
-      var _loadPantts = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+    loadJackets: function () {
+      var _loadJackets = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
         var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
@@ -215,46 +216,47 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context.prev = 0;
                 _context.next = 3;
-                return _services_women_pant_service__WEBPACK_IMPORTED_MODULE_1__["loadPants"]();
+                return _services_women_jacket_service__WEBPACK_IMPORTED_MODULE_1__["loadJackets"]();
 
               case 3:
                 response = _context.sent;
-                this.pants = response.data.data;
+                console.log(response.data.data);
+                this.jackets = response.data.data;
 
                 if (response.data.current_page < response.data.last_page) {
-                  this.morePants = true;
+                  this.moreJackets = true;
                   this.nextPage = response.data.current_page + 1;
                 } else {
-                  this.morePants = false;
+                  this.moreJackets = false;
                 }
 
-                _context.next = 11;
+                _context.next = 12;
                 break;
 
-              case 8:
-                _context.prev = 8;
+              case 9:
+                _context.prev = 9;
                 _context.t0 = _context["catch"](0);
                 this.flashMessage.error({
                   message: 'Some error occurred , Please refresh!',
                   time: 5000
                 });
 
-              case 11:
+              case 12:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[0, 8]]);
+        }, _callee, this, [[0, 9]]);
       }));
 
-      function loadPantts() {
-        return _loadPantts.apply(this, arguments);
+      function loadJackets() {
+        return _loadJackets.apply(this, arguments);
       }
 
-      return loadPantts;
+      return loadJackets;
     }(),
-    loadMorePants: function () {
-      var _loadMorePants = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+    loadMoreJackets: function () {
+      var _loadMoreJackets = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
         var _this = this;
 
         var response;
@@ -264,20 +266,20 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context2.prev = 0;
                 _context2.next = 3;
-                return _services_women_pant_service__WEBPACK_IMPORTED_MODULE_1__["loadMorePants"](this.nextPage);
+                return _services_women_jacket_service__WEBPACK_IMPORTED_MODULE_1__["loadMoreJackets"](this.nextPage);
 
               case 3:
                 response = _context2.sent;
 
                 if (response.data.current_page < response.data.last_page) {
-                  this.morePants = true;
+                  this.moreJackets = true;
                   this.nextPage = response.data.current_page + 1;
                 } else {
-                  this.morePants = false;
+                  this.moreJackets = false;
                 }
 
                 response.data.data.forEach(function (data) {
-                  _this.pants.push(data);
+                  _this.jackets.push(data);
                 });
                 _context2.next = 11;
                 break;
@@ -286,7 +288,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _context2.prev = 8;
                 _context2.t0 = _context2["catch"](0);
                 this.flashMessage.error({
-                  message: 'Some error occurred during load more pants , Please refresh!',
+                  message: 'Some error occurred during load more jackets , Please refresh!',
                   time: 5000
                 });
 
@@ -298,31 +300,31 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee2, this, [[0, 8]]);
       }));
 
-      function loadMorePants() {
-        return _loadMorePants.apply(this, arguments);
+      function loadMoreJackets() {
+        return _loadMoreJackets.apply(this, arguments);
       }
 
-      return loadMorePants;
+      return loadMoreJackets;
     }(),
     attachImage: function attachImage() {
-      this.pantData.image = this.$refs.newPantImage.files[0];
+      this.jacketData.image = this.$refs.newJacketImage.files[0];
       var reader = new FileReader();
       reader.addEventListener('load', function () {
-        this.$refs.newPantImageDisplay.src = reader.result;
+        this.$refs.newJacketImageDisplay.src = reader.result;
       }.bind(this), false);
-      reader.readAsDataURL(this.pantData.image);
+      reader.readAsDataURL(this.jacketData.image);
     },
-    hideNewPant: function hideNewPant() {
-      this.$refs.newPantModal.hide();
+    hideNewJacket: function hideNewJacket() {
+      this.$refs.newJacketModal.hide();
     },
-    showNewPant: function showNewPant() {
-      this.$refs.newPantModal.show();
+    showNewJacket: function showNewJacket() {
+      this.$refs.newJacketModal.show();
     },
     hideNewRating: function hideNewRating() {
       this.$refs.newRatingModal.hide();
     },
     showNewRating: function showNewRating(id) {
-      this.pantData.id = id;
+      this.jacketData.id = id;
       this.$refs.newRatingModal.show();
     },
     addNewRating: function () {
@@ -333,10 +335,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context3.prev = _context3.next) {
               case 0:
                 formData = new FormData();
-                formData.append('rating', this.pantData.rating);
+                formData.append('rating', this.jacketData.rating);
                 _context3.prev = 2;
                 _context3.next = 5;
-                return _services_women_pant_service__WEBPACK_IMPORTED_MODULE_1__["editRating"](this.pantData.id, formData);
+                return _services_women_jacket_service__WEBPACK_IMPORTED_MODULE_1__["editRating"](this.jacketData.id, formData);
 
               case 5:
                 response = _context3.sent;
@@ -345,7 +347,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   message: 'Rating added successfully!',
                   time: 5000
                 });
-                this.pantData = {
+                this.jacketData = {
                   id: '',
                   rating: ''
                 };
@@ -384,31 +386,31 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
       return addNewRating;
     }(),
-    createPant: function () {
-      var _createPant = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
+    createJacket: function () {
+      var _createJacket = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
         var formData, response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
           while (1) {
             switch (_context4.prev = _context4.next) {
               case 0:
                 formData = new FormData();
-                formData.append('name', this.pantData.name);
-                formData.append('price', this.pantData.price);
-                formData.append('description', this.pantData.description);
-                formData.append('image', this.pantData.image);
+                formData.append('name', this.jacketData.name);
+                formData.append('price', this.jacketData.price);
+                formData.append('description', this.jacketData.description);
+                formData.append('image', this.jacketData.image);
                 _context4.prev = 5;
                 _context4.next = 8;
-                return _services_women_pant_service__WEBPACK_IMPORTED_MODULE_1__["createPant"](formData);
+                return _services_women_jacket_service__WEBPACK_IMPORTED_MODULE_1__["createJacket"](formData);
 
               case 8:
                 response = _context4.sent;
-                this.pants.unshift(response.data);
-                this.hideNewPant();
+                this.jackets.unshift(response.data);
+                this.hideNewJacket();
                 this.flashMessage.success({
-                  message: 'Pant Stored successfully!',
+                  message: 'Jacket Stored successfully!',
                   time: 5000
                 });
-                this.pantData = {
+                this.jacketData = {
                   name: '',
                   price: '',
                   description: '',
@@ -443,11 +445,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee4, this, [[5, 15]]);
       }));
 
-      function createPant() {
-        return _createPant.apply(this, arguments);
+      function createJacket() {
+        return _createJacket.apply(this, arguments);
       }
 
-      return createPant;
+      return createJacket;
     }()
   }
 });
@@ -505,10 +507,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/women/Pants.vue?vue&type=template&id=307cacbc&":
-/*!*********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/women/Pants.vue?vue&type=template&id=307cacbc& ***!
-  \*********************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/women/Jackets.vue?vue&type=template&id=135ea3c5&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/women/Jackets.vue?vue&type=template&id=135ea3c5& ***!
+  \***********************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -537,7 +539,7 @@ var render = function() {
         _c(
           "div",
           { staticClass: "row" },
-          _vm._l(_vm.pants, function(pant, index) {
+          _vm._l(_vm.jackets, function(jacket, index) {
             return _c(
               "div",
               { key: index, staticClass: "col-lg-4 col-md-6 mb-4" },
@@ -550,12 +552,12 @@ var render = function() {
                         src:
                           _vm.$store.state.servicePath +
                           "/storage/" +
-                          pant.image,
+                          jacket.image,
                         alt: ""
                       },
                       on: {
                         click: function($event) {
-                          return _vm.showNewRating(pant.id)
+                          return _vm.showNewRating(jacket.id)
                         }
                       }
                     })
@@ -564,21 +566,21 @@ var render = function() {
                   _c("div", { staticClass: "card-body" }, [
                     _c("h4", { staticClass: "card-title" }, [
                       _c("a", { attrs: { href: "#" } }, [
-                        _vm._v(_vm._s(pant.name))
+                        _vm._v(_vm._s(jacket.name))
                       ])
                     ]),
                     _vm._v(" "),
                     _c("h5", { staticStyle: { color: "red" } }, [
-                      _vm._v("$" + _vm._s(pant.price))
+                      _vm._v("$" + _vm._s(jacket.price))
                     ]),
                     _vm._v(" "),
                     _c("p", { staticClass: "card-text" }, [
-                      _vm._v(_vm._s(pant.description))
+                      _vm._v(_vm._s(jacket.description))
                     ])
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "card-footer" }, [
-                    pant.rating >= 4.5
+                    jacket.rating >= 4.5
                       ? _c("small", { staticClass: "text-muted" }, [
                           _vm._v(
                             "★ ★ ★ ★\n                                ★\n                            "
@@ -586,7 +588,7 @@ var render = function() {
                         ])
                       : _vm._e(),
                     _vm._v(" "),
-                    pant.rating >= 3.5 && pant.rating <= 4.5
+                    jacket.rating >= 3.5 && jacket.rating <= 4.5
                       ? _c("small", { staticClass: "text-muted" }, [
                           _vm._v(
                             "★\n                                ★ ★ ★ ☆\n                            "
@@ -594,7 +596,7 @@ var render = function() {
                         ])
                       : _vm._e(),
                     _vm._v(" "),
-                    pant.rating >= 2.5 && pant.rating <= 3.5
+                    jacket.rating >= 2.5 && jacket.rating <= 3.5
                       ? _c("small", { staticClass: "text-muted" }, [
                           _vm._v(
                             "★\n                                ★ ★ ☆ ☆\n                            "
@@ -602,7 +604,7 @@ var render = function() {
                         ])
                       : _vm._e(),
                     _vm._v(" "),
-                    pant.rating >= 1.5 && pant.rating <= 2.5
+                    jacket.rating >= 1.5 && jacket.rating <= 2.5
                       ? _c("small", { staticClass: "text-muted" }, [
                           _vm._v(
                             "★\n                                ★ ☆ ☆ ☆\n                            "
@@ -610,7 +612,7 @@ var render = function() {
                         ])
                       : _vm._e(),
                     _vm._v(" "),
-                    pant.rating >= 0.5 && pant.rating <= 1.5
+                    jacket.rating >= 0.5 && jacket.rating <= 1.5
                       ? _c("small", { staticClass: "text-muted" }, [
                           _vm._v(
                             "★\n                                ☆ ☆ ☆ ☆\n                            "
@@ -618,7 +620,7 @@ var render = function() {
                         ])
                       : _vm._e(),
                     _vm._v(" "),
-                    pant.rating < 0.5
+                    jacket.rating < 0.5
                       ? _c("small", { staticClass: "text-muted" }, [
                           _vm._v(
                             "☆ ☆ ☆ ☆\n                                ☆\n                            "
@@ -644,28 +646,28 @@ var render = function() {
           {
             staticClass: "btn btn-primary fixed-button",
             attrs: { type: "button" },
-            on: { click: _vm.showNewPant }
+            on: { click: _vm.showNewJacket }
           },
           [
             _c("span", { staticClass: "fa fa-plus" }),
-            _vm._v(" Add New pant\n            ")
+            _vm._v(" Add New jacket\n            ")
           ]
         )
       ])
     ]),
     _vm._v(" "),
-    _vm.morePants
+    _vm.moreJackets
       ? _c("div", { staticClass: "text-center" }, [
           _c(
             "button",
             {
               staticClass: "btn btn-primary btn-sm button-arrow-down",
               attrs: { type: "button" },
-              on: { click: _vm.loadMorePants }
+              on: { click: _vm.loadMoreJackets }
             },
             [
               _c("span", { staticClass: "fa fa-arrow-down" }),
-              _vm._v("Load More")
+              _vm._v(" Load More")
             ]
           )
         ])
@@ -677,8 +679,8 @@ var render = function() {
         _c(
           "b-modal",
           {
-            ref: "newPantModal",
-            attrs: { "hide-footer": "", title: "Add New pant" }
+            ref: "newJacketModal",
+            attrs: { "hide-footer": "", title: "Add New jacket" }
           },
           [
             _c("div", { staticClass: "d-blockr" }, [
@@ -688,7 +690,7 @@ var render = function() {
                   on: {
                     submit: function($event) {
                       $event.preventDefault()
-                      return _vm.createPant($event)
+                      return _vm.createJacket($event)
                     }
                   }
                 },
@@ -701,8 +703,8 @@ var render = function() {
                         {
                           name: "model",
                           rawName: "v-model",
-                          value: _vm.pantData.name,
-                          expression: "pantData.name"
+                          value: _vm.jacketData.name,
+                          expression: "jacketData.name"
                         }
                       ],
                       staticClass: "form-control",
@@ -711,13 +713,13 @@ var render = function() {
                         id: "name",
                         placeholder: "Enter name"
                       },
-                      domProps: { value: _vm.pantData.name },
+                      domProps: { value: _vm.jacketData.name },
                       on: {
                         input: function($event) {
                           if ($event.target.composing) {
                             return
                           }
-                          _vm.$set(_vm.pantData, "name", $event.target.value)
+                          _vm.$set(_vm.jacketData, "name", $event.target.value)
                         }
                       }
                     }),
@@ -737,8 +739,8 @@ var render = function() {
                         {
                           name: "model",
                           rawName: "v-model",
-                          value: _vm.pantData.price,
-                          expression: "pantData.price"
+                          value: _vm.jacketData.price,
+                          expression: "jacketData.price"
                         }
                       ],
                       staticClass: "form-control",
@@ -748,13 +750,13 @@ var render = function() {
                         id: "price",
                         placeholder: "price"
                       },
-                      domProps: { value: _vm.pantData.price },
+                      domProps: { value: _vm.jacketData.price },
                       on: {
                         input: function($event) {
                           if ($event.target.composing) {
                             return
                           }
-                          _vm.$set(_vm.pantData, "price", $event.target.value)
+                          _vm.$set(_vm.jacketData, "price", $event.target.value)
                         }
                       }
                     }),
@@ -778,19 +780,19 @@ var render = function() {
                         {
                           name: "model",
                           rawName: "v-model",
-                          value: _vm.pantData.description,
-                          expression: "pantData.description"
+                          value: _vm.jacketData.description,
+                          expression: "jacketData.description"
                         }
                       ],
                       attrs: { rows: "4", cols: "50", id: "description" },
-                      domProps: { value: _vm.pantData.description },
+                      domProps: { value: _vm.jacketData.description },
                       on: {
                         input: function($event) {
                           if ($event.target.composing) {
                             return
                           }
                           _vm.$set(
-                            _vm.pantData,
+                            _vm.jacketData,
                             "description",
                             $event.target.value
                           )
@@ -808,10 +810,10 @@ var render = function() {
                   _c("div", { staticClass: "form-check" }, [
                     _c("label", { attrs: { for: "image" } }, [_vm._v("Image")]),
                     _vm._v(" "),
-                    _vm.pantData.image.name
+                    _vm.jacketData.image.name
                       ? _c("div", [
                           _c("img", {
-                            ref: "newPantImageDisplay",
+                            ref: "newJacketImageDisplay",
                             staticClass: "w-150px",
                             attrs: { src: "" }
                           })
@@ -819,7 +821,7 @@ var render = function() {
                       : _vm._e(),
                     _vm._v(" "),
                     _c("input", {
-                      ref: "newPantImage",
+                      ref: "newJacketImage",
                       staticClass: "form-control",
                       attrs: { type: "file", id: "image" },
                       on: { change: _vm.attachImage }
@@ -840,7 +842,7 @@ var render = function() {
                       {
                         staticClass: "btn btn-default",
                         attrs: { type: "button" },
-                        on: { click: _vm.hideNewPant }
+                        on: { click: _vm.hideNewJacket }
                       },
                       [_vm._v("Cancel")]
                     ),
@@ -894,8 +896,8 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.pantData.rating,
-                            expression: "pantData.rating"
+                            value: _vm.jacketData.rating,
+                            expression: "jacketData.rating"
                           }
                         ],
                         staticClass: "form-control",
@@ -911,7 +913,7 @@ var render = function() {
                                 return val
                               })
                             _vm.$set(
-                              _vm.pantData,
+                              _vm.jacketData,
                               "rating",
                               $event.target.multiple
                                 ? $$selectedVal
@@ -1065,55 +1067,55 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/services/women/pant_service.js":
-/*!*****************************************************!*\
-  !*** ./resources/js/services/women/pant_service.js ***!
-  \*****************************************************/
-/*! exports provided: createPant, loadPants, deletePant, editPant, loadMorePants, editRating */
+/***/ "./resources/js/services/women/jacket_service.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/services/women/jacket_service.js ***!
+  \*******************************************************/
+/*! exports provided: createJacket, loadJackets, deleteJacket, editJacket, loadMoreJackets, editRating */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createPant", function() { return createPant; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadPants", function() { return loadPants; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deletePant", function() { return deletePant; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editPant", function() { return editPant; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadMorePants", function() { return loadMorePants; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createJacket", function() { return createJacket; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadJackets", function() { return loadJackets; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteJacket", function() { return deleteJacket; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editJacket", function() { return editJacket; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadMoreJackets", function() { return loadMoreJackets; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editRating", function() { return editRating; });
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../http_service */ "./resources/js/services/http_service.js");
 
-function createPant(data) {
-  return Object(_http_service__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post('/Women/pants', data);
+function createJacket(data) {
+  return Object(_http_service__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post('/Women/jackets', data);
 }
-function loadPants() {
-  return Object(_http_service__WEBPACK_IMPORTED_MODULE_0__["http"])().get('/Women/pants');
+function loadJackets() {
+  return Object(_http_service__WEBPACK_IMPORTED_MODULE_0__["http"])().get('/Women/jackets');
 }
-function deletePant(id) {
-  return Object(_http_service__WEBPACK_IMPORTED_MODULE_0__["http"])()["delete"]("/Women/pants/".concat(id));
+function deleteJacket(id) {
+  return Object(_http_service__WEBPACK_IMPORTED_MODULE_0__["http"])()["delete"]("/Women/jackets/".concat(id));
 }
-function editPant(id, data) {
-  return Object(_http_service__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post("/Women/pants/".concat(id), data);
+function editJacket(id, data) {
+  return Object(_http_service__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post("/Women/jackets/".concat(id), data);
 }
-function loadMorePants(nextPage) {
-  return Object(_http_service__WEBPACK_IMPORTED_MODULE_0__["http"])().get("/Women/pants?page=".concat(nextPage));
+function loadMoreJackets(nextPage) {
+  return Object(_http_service__WEBPACK_IMPORTED_MODULE_0__["http"])().get("/Women/jackets?page=".concat(nextPage));
 }
 function editRating(id, data) {
-  return Object(_http_service__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post("/Women/pants/rating/".concat(id), data);
+  return Object(_http_service__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post("/Women/jackets/rating/".concat(id), data);
 }
 
 /***/ }),
 
-/***/ "./resources/js/views/women/Pants.vue":
-/*!********************************************!*\
-  !*** ./resources/js/views/women/Pants.vue ***!
-  \********************************************/
+/***/ "./resources/js/views/women/Jackets.vue":
+/*!**********************************************!*\
+  !*** ./resources/js/views/women/Jackets.vue ***!
+  \**********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Pants_vue_vue_type_template_id_307cacbc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Pants.vue?vue&type=template&id=307cacbc& */ "./resources/js/views/women/Pants.vue?vue&type=template&id=307cacbc&");
-/* harmony import */ var _Pants_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Pants.vue?vue&type=script&lang=js& */ "./resources/js/views/women/Pants.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Jackets_vue_vue_type_template_id_135ea3c5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Jackets.vue?vue&type=template&id=135ea3c5& */ "./resources/js/views/women/Jackets.vue?vue&type=template&id=135ea3c5&");
+/* harmony import */ var _Jackets_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Jackets.vue?vue&type=script&lang=js& */ "./resources/js/views/women/Jackets.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -1123,9 +1125,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Pants_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Pants_vue_vue_type_template_id_307cacbc___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Pants_vue_vue_type_template_id_307cacbc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Jackets_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Jackets_vue_vue_type_template_id_135ea3c5___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Jackets_vue_vue_type_template_id_135ea3c5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -1135,38 +1137,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/views/women/Pants.vue"
+component.options.__file = "resources/js/views/women/Jackets.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/views/women/Pants.vue?vue&type=script&lang=js&":
-/*!*********************************************************************!*\
-  !*** ./resources/js/views/women/Pants.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************/
+/***/ "./resources/js/views/women/Jackets.vue?vue&type=script&lang=js&":
+/*!***********************************************************************!*\
+  !*** ./resources/js/views/women/Jackets.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pants_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Pants.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/women/Pants.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pants_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Jackets_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Jackets.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/women/Jackets.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Jackets_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/views/women/Pants.vue?vue&type=template&id=307cacbc&":
-/*!***************************************************************************!*\
-  !*** ./resources/js/views/women/Pants.vue?vue&type=template&id=307cacbc& ***!
-  \***************************************************************************/
+/***/ "./resources/js/views/women/Jackets.vue?vue&type=template&id=135ea3c5&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/views/women/Jackets.vue?vue&type=template&id=135ea3c5& ***!
+  \*****************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Pants_vue_vue_type_template_id_307cacbc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Pants.vue?vue&type=template&id=307cacbc& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/women/Pants.vue?vue&type=template&id=307cacbc&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Pants_vue_vue_type_template_id_307cacbc___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Jackets_vue_vue_type_template_id_135ea3c5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Jackets.vue?vue&type=template&id=135ea3c5& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/women/Jackets.vue?vue&type=template&id=135ea3c5&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Jackets_vue_vue_type_template_id_135ea3c5___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Pants_vue_vue_type_template_id_307cacbc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Jackets_vue_vue_type_template_id_135ea3c5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

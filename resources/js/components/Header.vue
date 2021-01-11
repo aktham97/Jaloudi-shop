@@ -7,19 +7,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home
-                            <span class="sr-only">(current)</span>
+                    <li class="nav-item ">
+                        <a class="nav-link" >
+                            <router-link   to='/Men/Shirts' >Men´s clothing</router-link>
+
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link">
+                            <router-link   to='/Women/Dresses' >Women´s clothing</router-link>
+                        </a>
                     </li>
                     <li class="nav-item">
                         <button class="nav-link btn btn-link" v-on:click="logout" href="">Logout</button>
